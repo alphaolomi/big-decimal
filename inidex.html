@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pi Calculator</title>
+    <style>
+      body {
+        background: #20262E;
+        padding: 20px;
+        font-family: Helvetica;
+      }
+      .pi-calculator-container {
+        background-color: white;
+        width: 500px;
+        border-radius: 10px;
+        text-align: center;
+        padding: 10px;
+        min-height: 300px;
+      }
+      .pi-calculator-container button {
+        background: #0084ff;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 14px;
+        font-size: 15px;
+        color: #fff;
+        cursor: pointer;
+      }
+      .pi-calculator-container .pi-content {
+        color: #aaa;
+        font-size: 0.8em;
+        min-height: 200px;
+        word-break: break-all;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pi-calculator-container">
+      <h1>Pi Calculator</h1>
+      <p id="pi" class="pi-content"></p>
+      <button onclick="computePi()">Compute me</button>
+    </div>
+  </body>
+  <script type="text/javascript">
+    function computePi() {
+      document.getElementById('pi').textContent = '3.14'
+    }
+
+    // increase presicsion
+    function computePi2() {
+  document.getElementById('pi').textContent = (4 * Math.atan(1)).toPrecision(100) 
+}
+  </script>
+</html>
