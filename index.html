@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PI Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="pi-calculator-container">
+    <h1>PI Calculator</h1>
+    <p id="pi" class="pi-content"></p>
+    <button onclick="computePi()">Compute me</button>
+  </div>
+</body>
+<script type="text/javascript">
+  function computePi() {
+    document.getElementById('pi').textContent = '3.14'
+  }
+
+  // increase presicsion
+  function computePi2() {
+    document.getElementById('pi').textContent = (4 * Math.atan(1)).toPrecision(100)
+  }
+</script>
+
+</html>
